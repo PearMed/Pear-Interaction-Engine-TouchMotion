@@ -8,7 +8,6 @@ namespace Pear.InteractionEngine.Examples
 	/// </summary>
 	public class EnableDisableLeapControllerBasedOnOtherControllers : MonoBehaviour
 	{
-
 		[Tooltip("Left controller")]
 		public LeapMotionController Left;
 
