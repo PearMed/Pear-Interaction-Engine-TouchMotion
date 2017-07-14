@@ -7016,13 +7016,13 @@ MonoBehaviour:
   handedness: 0
   handModelPalmWidth: 0.085
   fingers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  palm: {fileID: 0}
-  forearm: {fileID: 0}
+  - {fileID: 114431605943660154}
+  - {fileID: 114059284449160674}
+  - {fileID: 114939084409492874}
+  - {fileID: 114901757173286488}
+  - {fileID: 114782714243151788}
+  palm: {fileID: 4317155806081882}
+  forearm: {fileID: 4340656472749854}
   wristJoint: {fileID: 0}
   elbowJoint: {fileID: 0}
   filtering: 0.5
@@ -7558,13 +7558,13 @@ MonoBehaviour:
   handedness: 0
   handModelPalmWidth: 0.085
   fingers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  palm: {fileID: 0}
-  forearm: {fileID: 0}
+  - {fileID: 114718743949592608}
+  - {fileID: 114526361557237384}
+  - {fileID: 114714761597926118}
+  - {fileID: 114868821007172412}
+  - {fileID: 114462400192970558}
+  palm: {fileID: 4655404940417538}
+  forearm: {fileID: 4584898412819524}
   wristJoint: {fileID: 0}
   elbowJoint: {fileID: 0}
   filtering: 0.5
