@@ -165,6 +165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4305330009570296}
   - component: {fileID: 114220304909126866}
+  - component: {fileID: 114017364569953584}
   m_Layer: 0
   m_Name: ProximityDetector_L
   m_TagString: Untagged
@@ -483,6 +484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4540696792528542}
   - component: {fileID: 114153559588425136}
+  - component: {fileID: 114489304828863200}
   m_Layer: 0
   m_Name: ProximityDetector_R
   m_TagString: Untagged
@@ -656,7 +658,6 @@ GameObject:
   - component: {fileID: 20344232389907508}
   - component: {fileID: 114368800606051230}
   - component: {fileID: 114012343686536858}
-  - component: {fileID: 114112171401403922}
   m_Layer: 0
   m_Name: CenterEyeAnchor
   m_TagString: MainCamera
@@ -1023,7 +1024,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4231637890259930}
   - component: {fileID: 114743127770010814}
-  - component: {fileID: 114610922675448298}
   m_Layer: 0
   m_Name: PinchDector_R
   m_TagString: Untagged
@@ -1733,7 +1733,7 @@ GameObject:
   - component: {fileID: 114555791959639916}
   - component: {fileID: 114360697445473698}
   - component: {fileID: 114763960986000846}
-  - component: {fileID: 114024458125709400}
+  - component: {fileID: 114432757988592926}
   m_Layer: 0
   m_Name: controller_right
   m_TagString: Untagged
@@ -2323,8 +2323,8 @@ GameObject:
   - component: {fileID: 114109919410790258}
   - component: {fileID: 114186045308865878}
   - component: {fileID: 114455304023841262}
+  - component: {fileID: 114736843898379680}
   - component: {fileID: 114363526836946126}
-  - component: {fileID: 114662537695473806}
   - component: {fileID: 114222628288687180}
   m_Layer: 0
   m_Name: controller_left
@@ -4413,7 +4413,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1643528173834150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.9188995, z: -0.49299622}
+  m_LocalPosition: {x: 0, y: 0, z: -0.49299622}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4207917672520638}
@@ -5489,6 +5489,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 2
+--- !u!114 &114017364569953584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1057271663016554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb3a2244823ce5429fd2c20a5b4b09c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hand: {fileID: 114623141520015024}
 --- !u!114 &114018946889887750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5532,20 +5544,6 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: Leap.Unity.Hands+HandEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
---- !u!114 &114024458125709400
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1674226571991524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3fb7a2b3afe8e3408d42785db85cceb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LineWidth: 0.005
-  validCollisionColor: {r: 0, g: 1, b: 0, a: 1}
-  invalidCollisionColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &114024497536718570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5663,50 +5661,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23a6775025bc1574e8ebdbf12f8e9d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 114820940598503330}
-  ValueConverter: {fileID: 114455304023841262}
-  EventController: {fileID: 114186045308865878}
-  EventHandler: {fileID: 114363526836946126}
+  Event: {fileID: 114818700948629162}
+  ValueConverter: {fileID: 114763960986000846}
+  EventController: {fileID: 114360697445473698}
+  EventHandler: {fileID: 114757802750827564}
   EventPropertyType: System.Single, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   EventHandlerPropertyType: System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral,
     PublicKeyToken=b77a5c561934e089
   ReceiveEventState: 1
---- !u!114 &114112171401403922
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1285241082864872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70952854c0c45534ca89f46e23ac808f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enableCulling: 1
-  _enableCullingChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: VolumeViewer.BoolEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  _enableDepthTest: 1
-  _enableDepthTestChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: VolumeViewer.BoolEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  _leap: 3
-  _leapChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: VolumeViewer.FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  _volumeObjects:
-  - {fileID: 0}
-  _volumeObjectsChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: VolumeViewer.EmptyEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!114 &114117310692548866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5822,13 +5784,13 @@ MonoBehaviour:
   Period: 0.1
   TargetObjects: []
   TagName: 
-  UseLayersNotList: 0
+  UseLayersNotList: 1
   Layer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   OnDistance: 0.01
   OffDistance: 0.015
-  ShowGizmos: 1
+  ShowGizmos: 0
 --- !u!114 &114175913326158118
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6103,13 +6065,13 @@ MonoBehaviour:
   Period: 0.1
   TargetObjects: []
   TagName: 
-  UseLayersNotList: 0
+  UseLayersNotList: 1
   Layer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   OnDistance: 0.01
   OffDistance: 0.015
-  ShowGizmos: 1
+  ShowGizmos: 0
 --- !u!114 &114222628288687180
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6381,7 +6343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _eyeType:
     _orderType: 3
-  _overrideEyePosition: 1
+  _overrideEyePosition: 0
 --- !u!114 &114374729548196722
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6531,7 +6493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e1c8d784604a8ba021be6abc6470a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerType: 1
+  fingerType: 0
   bones:
   - {fileID: 0}
   - {fileID: 0}
@@ -6542,6 +6504,20 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   filtering: 0.5
+--- !u!114 &114432757988592926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1674226571991524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d2cb7e90a281f458645cea58694a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LineWidth: 0.005
+  LineLength: 0.01
+  LineColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!114 &114440842804291912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6591,7 +6567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e1c8d784604a8ba021be6abc6470a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerType: 1
+  fingerType: 4
   bones:
   - {fileID: 0}
   - {fileID: 0}
@@ -6666,6 +6642,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bcd03e00992e084c8be61565d44b8bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114489304828863200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1201349544342610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb3a2244823ce5429fd2c20a5b4b09c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hand: {fileID: 114215810338221390}
 --- !u!114 &114494042694403372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6889,18 +6877,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 1
---- !u!114 &114610922675448298
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1444211772529650}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feb3a2244823ce5429fd2c20a5b4b09c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Hand: {fileID: 114215810338221390}
 --- !u!114 &114623141520015024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7137,20 +7113,6 @@ MonoBehaviour:
   wristJoint: {fileID: 0}
   elbowJoint: {fileID: 0}
   filtering: 0.5
---- !u!114 &114662537695473806
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1892272532185314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3fb7a2b3afe8e3408d42785db85cceb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LineWidth: 0.005
-  validCollisionColor: {r: 0, g: 1, b: 0, a: 1}
-  invalidCollisionColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &114664549697627502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7179,7 +7141,7 @@ MonoBehaviour:
   enableAdaptiveResolution: 0
   maxRenderScale: 1
   minRenderScale: 0.7
-  _trackingOriginType: 0
+  _trackingOriginType: 1
   usePositionTracking: 1
   useIPDInPositionTracking: 1
   resetTrackerOnLoad: 0
@@ -7236,7 +7198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e1c8d784604a8ba021be6abc6470a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerType: 1
+  fingerType: 2
   bones:
   - {fileID: 0}
   - {fileID: 0}
@@ -7277,7 +7239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e1c8d784604a8ba021be6abc6470a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerType: 1
+  fingerType: 0
   bones:
   - {fileID: 0}
   - {fileID: 0}
@@ -7304,6 +7266,20 @@ MonoBehaviour:
   TouchListener: 2
   ButtonListener: 2
   Axis2DListener: 0
+--- !u!114 &114736843898379680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892272532185314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d2cb7e90a281f458645cea58694a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LineWidth: 0.005
+  LineLength: 0.01
+  LineColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!114 &114743127770010814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7327,7 +7303,7 @@ MonoBehaviour:
       PublicKeyToken=null
   _handModel: {fileID: 114215810338221390}
   ControlsTransform: 1
-  ShowGizmos: 1
+  ShowGizmos: 0
   ActivateDistance: 0.03
   DeactivateDistance: 0.04
 --- !u!114 &114757802750827564
@@ -7416,7 +7392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e1c8d784604a8ba021be6abc6470a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerType: 1
+  fingerType: 4
   bones:
   - {fileID: 0}
   - {fileID: 0}
@@ -7513,7 +7489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e1c8d784604a8ba021be6abc6470a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerType: 1
+  fingerType: 3
   bones:
   - {fileID: 0}
   - {fileID: 0}
@@ -7561,7 +7537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e1c8d784604a8ba021be6abc6470a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerType: 1
+  fingerType: 3
   bones:
   - {fileID: 0}
   - {fileID: 0}
@@ -7694,7 +7670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e1c8d784604a8ba021be6abc6470a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerType: 1
+  fingerType: 2
   bones:
   - {fileID: 0}
   - {fileID: 0}
@@ -7795,7 +7771,7 @@ MonoBehaviour:
       PublicKeyToken=null
   _handModel: {fileID: 114623141520015024}
   ControlsTransform: 1
-  ShowGizmos: 1
+  ShowGizmos: 0
   ActivateDistance: 0.03
   DeactivateDistance: 0.04
 --- !u!114 &114988041272211014
@@ -8428,6 +8404,8 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212333679333986974
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -8468,6 +8446,8 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212407979093881332
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -8508,6 +8488,8 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212475073174782482
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -8548,6 +8530,8 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212512672658055656
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -8588,6 +8572,8 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212726596696884888
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -8628,6 +8614,8 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212774350895451092
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -8668,6 +8656,8 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212830798744761128
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -8708,6 +8698,8 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212925664221665810
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -8748,6 +8740,8 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212995477966543204
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -8788,3 +8782,5 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
