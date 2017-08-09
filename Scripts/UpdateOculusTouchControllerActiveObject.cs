@@ -35,6 +35,9 @@ public class UpdateOculusTouchControllerActiveObject : MonoBehaviour {
 	/// <param name="controller">controller to check</param>
 	private void EnsureTouchControllerLocationIsCorrect(OculusTouchController controller)
 	{
+		if (controller == null)
+			return;
+
 		if (controller.Location != ControllerLocation.LeftHand && controller.Location != ControllerLocation.RightHand)
 			throw new MissingReferenceException("Oculus touch controllers should be in either the left or right hand");
 	}
