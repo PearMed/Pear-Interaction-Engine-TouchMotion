@@ -67,7 +67,7 @@ public class UpdateOculusTouchControllerActiveObject : MonoBehaviour {
 		if (touchController != null)
 		{
 			Debug.Log(string.Format("Listening for active object changes on {0} for {1}", controller.name, touchController.name));
-			controller.ActiveObjectsChangedEvent += (oldActiveObjects, newActiveObjects) => { touchController.ActiveObjects = newActiveObjects; };
+			controller.PostActiveObjectsChangedEvent += (oldActiveObjects, newActiveObjects) => { touchController.ActiveObjects = newActiveObjects; };
 		}
 	}
 }
